@@ -1,0 +1,92 @@
+{"properties": [
+  {
+    "name": "app.module.name.api-base",
+    "type": "java.lang.String",
+    "description": "Name of the api-base module, used for logging and other purposes."
+  },
+  {
+    "name": "app.module.name.api-core",
+    "type": "java.lang.String",
+    "description": "Name of the api-core module, used for logging and other purposes."
+  },
+  {
+    "name": "app.module.name.api-rest",
+    "type": "java.lang.String",
+    "description": "Name of the api-rest module, used for logging and other purposes."
+  },
+  {
+    "name": "api.rest.cases-prefix",
+    "type": "java.lang.String",
+    "description": "Prefix for REST endpoints related to 'cases', e.g., /api/application/**"
+  },
+  {
+    "name": "api.rest.prefix",
+    "type": "java.lang.String",
+    "description": "Prefix for general REST endpoints, e.g., /api/dev/endpoint/**"
+  },
+  {
+    "name": "app.module.name.security",
+    "type": "java.lang.String",
+    "description": "A description for 'app.module.name.security'"
+  },
+  {
+    "name": "app.auth.password.allow-plain-text-legacy",
+    "type": "java.lang.String",
+    "description": "A description for 'app.auth.password.allow-plain-text-legacy'"
+  },
+  {
+    "name": "app.jwt.refresh-expiration-minutes",
+    "type": "java.lang.String",
+    "description": "A description for 'app.jwt.refresh-expiration-minutes'"
+  },
+  {
+    "name": "app.jwt.access-expiration-minutes",
+    "type": "java.lang.String",
+    "description": "A description for 'app.jwt.access-expiration-minutes'"
+  },
+  {
+    "name": "app.jwt.issuer",
+    "type": "java.lang.String",
+    "description": "A description for 'app.jwt.issuer'"
+  },
+  {
+    "name": "app.jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'app.jwt.secret'"
+  },
+  {
+    "name": "app.module.name.api-auth",
+    "type": "java.lang.String",
+    "description": "A description for 'app.module.name.api-auth'"
+  },
+  {
+    "name": "app.module.name.s3-storage",
+    "type": "java.lang.String",
+    "description": "A description for 'app.module.name.s3-storage'"
+  },
+  {
+    "name": "app.module.name.mail-module",
+    "type": "java.lang.String",
+    "description": "A description for 'app.module.name.mail-module'"
+  },
+  {
+    "name": "mail.from",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.from'"
+  },
+  {
+    "name": "resend.api.key",
+    "type": "java.lang.String",
+    "description": "A description for 'resend.api.key'"
+  },
+  {
+    "name": "api.rest.cases.command-prefix",
+    "type": "java.lang.String",
+    "description": "A description for 'api.rest.cases.command-prefix'"
+  },
+  {
+    "name": "api.rest.command-prefix",
+    "type": "java.lang.String",
+    "description": "A description for 'api.rest.command-prefix'"
+  }
+]}

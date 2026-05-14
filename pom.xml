@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.0.6</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>ufps.edu.co</groupId>
+	<artifactId>posgrados</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<!-- BACKEND -->
+		<module>backend/api-base</module>
+		<module>backend/api-core</module>
+		<module>backend/api-rest</module>
+		<module>backend/api-auth</module>
+		<module>backend/s3-storage</module>
+		<module>backend/mail-module</module>
+
+		<!-- PLATFORM -->
+		<module>platform/application</module>
+		<module>platform/security</module>
+	</modules>
+
+	<name>Posgrados API</name>
+	<description />
+	<url></url>
+	<licenses>
+		<license />
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>gpinto</id>
+			<name>Gabriel Pinto</name>
+			<email>gabriel@tu-dominio.com</email>
+			<url>https://github.com/GabrielPinto21</url>
+			<organization>UFPS</organization>
+			<organizationUrl>https://ww2.ufps.edu.co</organizationUrl>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+			</roles>
+			<timezone>America/Bogota</timezone>
+		</developer>
+		<developer>
+			<id>a-cubica-r</id>
+			<name>Adolfo Alejandro Arenas Ramos</name>
+			<email>adolfoalejandroarenasramos@outlook.com</email>
+			<url>https://github.com/a-cubica-r/</url>
+			<organization>UFPS</organization>
+			<organizationUrl>https://ww2.ufps.edu.co</organizationUrl>
+			<roles>
+				<role>Lead</role>
+				<role>Developer</role>
+				<role>Product Owner</role>
+			</roles>
+			<timezone>America/Bogota</timezone>
+		</developer>
+	</developers>
+	<scm>
+
+		<connection />
+		<developerConnection />
+		<tag />
+		<url>https://github.com/GabrielPinto21/Proyecto_Posgrados_backend/</url>
+	</scm>
+
+	<properties>
+		<java.version>21</java.version>
+		<modelmapper.version>3.2.4</modelmapper.version>
+		<springdoc.version>3.0.2</springdoc.version>
+		<lombok.version>1.18.38</lombok.version>
+		<jjwt.version>0.12.6</jjwt.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- Spring Boot BOM -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>4.0.6</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-security</artifactId>
+				<version>3.5.3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- JACKSON -->
+			<!-- Source: https://mvnrepository.com/artifact/tools.jackson.core/jackson-core -->
+			<dependency>
+				<groupId>tools.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>3.1.3</version>
+				<type>pom</type>
+				<scope>compile</scope>
+			</dependency>
+
+			<!-- ModelMapper -->
+			<dependency>
+				<groupId>org.modelmapper</groupId>
+				<artifactId>modelmapper</artifactId>
+				<version>${modelmapper.version}</version>
+			</dependency>
+
+			<!-- SpringDoc -->
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+				<version>${springdoc.version}</version>
+			</dependency>
+
+			<!-- JJWT -->
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt-api</artifactId>
+				<version>${jjwt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt-impl</artifactId>
+				<version>${jjwt.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt-jackson</artifactId>
+				<version>${jjwt.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<parameters>true</parameters>
+						<annotationProcessorPaths>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>${lombok.version}</version>
+							</path>
+						</annotationProcessorPaths>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

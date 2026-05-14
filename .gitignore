@@ -1,0 +1,42 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Telosys Tools ###
+TelosysTools/
+
+### VS Code ###
+.vscode/
+
+# Local secrets/config for Spring Boot (loaded via spring.config.import)
+.env.properties
+
+# Any SQL files (e.g., database dumps, migration scripts) that should not be committed
+.sql/
